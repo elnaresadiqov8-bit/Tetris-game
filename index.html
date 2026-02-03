@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>Tetris</h1>
+        <div class="stats">
+          <div>
+            <span class="label">Skor</span>
+            <span id="score">0</span>
+          </div>
+          <div>
+            <span class="label">Seviye</span>
+            <span id="level">1</span>
+          </div>
+          <div>
+            <span class="label">Satır</span>
+            <span id="lines">0</span>
+          </div>
+        </div>
+        <div class="next">
+          <h2>Sonraki</h2>
+          <canvas id="next" width="120" height="120"></canvas>
+        </div>
+        <button id="start">Duraklat</button>
+        <button id="reset">Sıfırla</button>
+        <p class="help">
+          Kontroller: ⬅️ ➡️ aşağı hareket, ⬆️ döndür, boşluk düşür, P
+          duraklat.
+        </p>
+      </section>
+      <section class="game">
+        <canvas id="board" width="300" height="600"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <div>
+            <h2>Oyun Bitti</h2>
+            <p>Yeniden başlatmak için sıfırla.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
